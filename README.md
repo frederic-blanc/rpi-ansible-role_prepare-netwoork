@@ -1,1 +1,3 @@
-# rpi-ansible-role_prepare-netwoork
+# RPI4 Ansible Role
+
+prepare-network
