@@ -265,6 +265,16 @@
   - "wpa_supplicant.service"
   become: true
   
+- name: ensure /boot/firmware/usercfg.txt exist
+  copy:
+    content:        ""
+    dest:           "/boot/firmware/usercfg.txt"
+    force:          no
+    owner:          root
+    group:          root
+    mode:           '0644'
+  become:           true
+  
 - name: add module bt and wifi to disable list
   blockinfile:
     path:           "/boot/firmware/usercfg.txt"
